@@ -1,0 +1,12 @@
+{
+    "name": "igniweb/foundation",
+    "description": "Foundation for Igniweb Framework",
+    "authors": [
+        {
+            "name": "Sébastien Muller",
+            "email": "contact@igniweb.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
