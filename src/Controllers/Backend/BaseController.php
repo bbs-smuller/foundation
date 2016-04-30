@@ -2,13 +2,27 @@
 
 namespace Igniweb\Foundation\Controllers\Backend;
 
-use Illuminate\Routing\Controller;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+use Auth;
+use Igniweb\Foundation\Controllers\BaseController as FoundationBaseController;
 
-class BaseController extends Controller
+class BaseController extends FoundationBaseController
 {
-    use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
+	/**
+	 * Backend authenticated user.
+	 *
+	 * @var \Illuminate\Contracts\Auth\Authenticatable
+	 */
+	protected $authMember;
+
+	/**
+	 * Backend base controller constructor.
+	 *
+	 * @return void
+	 */
+    public function __construct()
+    {
+    	parent::__construct();
+
+    	$this->authMember = Auth::user();
+    }
 }
