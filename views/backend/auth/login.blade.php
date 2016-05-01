@@ -1,5 +1,5 @@
 @extends('foundation::backend.layouts.auth')
 
 @section('main')
-	Vai
+	<login-form action="{{ url('auth/attempt') }}" redirect="/"></login-form>
 @stop
