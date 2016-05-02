@@ -11,12 +11,7 @@
 		<div class="medium-6 medium-centered large-4 large-centered columns">
 			@yield('main')
 
-			<div class="bar">
-				<div class="color color-1"></div>
-				<div class="color color-2"></div>
-				<div class="color color-3"></div>
-				<div class="color color-4"></div>
-			</div>
+			<bottom-bar animate="false"></bottom-bar>
 		</div>
 	</div>
 	<script src="/js/backend.js"></script>
